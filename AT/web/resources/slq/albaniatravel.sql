@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 18, 2018 at 03:47 PM
+-- Generation Time: Jun 18, 2018 at 08:03 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `descri` (
 --
 
 INSERT INTO `descri` (`id`, `de`) VALUES
-(1, '\"Albania Travel\" is an application that made to help its users find touristic spots to visit based entirely on their own criteria. The application is very simple to use and this is exactly it\'s strong point. The user can select different tags from a list (and category of places), the software will process the information and then display a list of toursim spot that fulfill the user previous selected criteria.');
+(1, '\"Albania Travel\" is an application that made to help its users find touristic spots to visit based entirely on their own criteria. The application is very simple to use and this is exactly it\'s strong point. The user can select different tags from a list (and category of places), the software will process the information and then display a list of toursim spot that fulfill the user previous selected criteria. ');
 
 -- --------------------------------------------------------
 
@@ -75,6 +75,7 @@ CREATE TABLE IF NOT EXISTS `places` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
   `category` varchar(20) NOT NULL,
   `name` varchar(20) NOT NULL,
+  `posURL` varchar(200) NOT NULL,
   `plc_fk` int(5) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `plc_fk` (`plc_fk`)
@@ -84,14 +85,14 @@ CREATE TABLE IF NOT EXISTS `places` (
 -- Dumping data for table `places`
 --
 
-INSERT INTO `places` (`id`, `category`, `name`, `plc_fk`) VALUES
-(1, 'city', 'Tirane', 1),
-(2, 'city', 'Durres', 1),
-(3, 'village', 'Valbona Valley', 2),
-(4, 'village', 'Voskopoj', 2),
-(5, 'point', 'Albanian Riviera', 3),
-(6, 'point', 'Apollonia', 3),
-(7, 'city', 'Sarande', 1);
+INSERT INTO `places` (`id`, `category`, `name`, `posURL`, `plc_fk`) VALUES
+(1, 'City', 'Tirane', 'https://www.google.com/maps/place/Tirana,+Albania/@41.3310413,19.7828038,13z/data=!3m1!4b1!4m5!3m4!1s0x1350310470fac5db:0x40092af10653720!8m2!3d41.3275459!4d19.8186982', 1),
+(2, 'City', 'Durres', 'https://www.google.com/maps/place/Durr%C3%ABs,+Albania/@41.3313949,19.4313379,13z/data=!3m1!4b1!4m5!3m4!1s0x134fd97c5fbbbcc7:0x77f377eae6cd81ee!8m2!3d41.3245904!4d19.4564686', 1),
+(3, 'Village', 'Valbona Valley', 'https://www.google.com/maps/place/Valbona+Valley+National+Park/@42.4258685,19.9236793,17z/data=!3m1!4b1!4m5!3m4!1s0x1352429cf2d8ef07:0x9792c5b26d99a589!8m2!3d42.4258646!4d19.925868', 2),
+(4, 'Village', 'Voskopoj', 'https://www.google.com/maps/place/Voskopoj%C3%AB,+Albania/@40.6319402,20.5809759,15z/data=!3m1!4b1!4m5!3m4!1s0x135a766688c1c12b:0x231668987d97e538!8m2!3d40.6335639!4d20.5885853', 2),
+(5, 'Tourist Point', 'Albanian Riviera', 'https://www.google.com/maps/place/Dhermi+Beach/@40.1415863,19.6373749,17z/data=!3m1!4b1!4m5!3m4!1s0x135b2b8ac84d3775:0x92fb0751199900ef!8m2!3d40.1415822!4d19.6395636', 3),
+(6, 'Tourist Point', 'Apollonia', 'https://www.google.com/maps/place/Apollonia+Archaeological+Park/@40.7219247,19.4705742,17z/data=!3m1!4b1!4m5!3m4!1s0x134551ff9d67761d:0x8ffa6f789cdcdc2e!8m2!3d40.7219207!4d19.4727629', 3),
+(7, 'City', 'Sarande', 'https://www.google.com/maps/place/Sarand%C3%AB,+Albania/@39.8673863,19.9890447,14z/data=!3m1!4b1!4m5!3m4!1s0x135b14ffafac5431:0xd6d55e7e08a21910!8m2!3d39.8592119!4d20.0271001', 1);
 
 -- --------------------------------------------------------
 
