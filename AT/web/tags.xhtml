@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      
+    <h:head>
+        <title>Tags</title>
+        
+         <h:outputStylesheet library="css" name="style.css"  />
+      
+        <style>
+            .bckg{
+                background-image: url("resources/beach-scenery-albania.jpg");
+            }
+        </style>
+        
+    </h:head>
+    <h:body styleClass="bckg" style="background-size: auto" >
+       
+                       
+        <center>
+            <h1 > Albania Travel </h1>
+            
+            <h1 > List of Tags  </h1>
+            <h1 > Selected Tags</h1>
+            <h1 > Choose Category</h1>
+            
+            <h2>
+               
+                    
+                <h:form>
+                    
+                    
+                     <h:commandButton value="Home" action="index"  />
+                      <h:commandButton value="Tags" action="tags"  />
+                       <h:commandButton value="Places" action="places"  />
+                        <h:commandButton value="About" action="about"  />
+                        
+                        <h:selectOneMenu  value="#{tgbean.currentselected}" >
+                            <f:selectItems value="#{manager.tags()}" var="manager" itemValue="#{manager.tg}" itemLabel="#{manager.tg}"/>
+                            </h:selectOneMenu>
+                        
+                        <h:commandButton value="Add" action="#{tgbean.addtoList()}" >
+                           
+                        </h:commandButton>
+                        
+                        <h:commandButton value="Delete All" action="#{tgbean.delAll()}" >
+                            </h:commandButton>
+                        
+                    
+                            
+                        <ui:repeat var="currentselected" value="#{tgbean.stg}">
+                                <li>#{currentselected}</li>
+                            </ui:repeat>
+
+                
+                
+                        <h:selectManyCheckbox value="#{tgbean.cat}"  layout="pageDirection">
+                    <f:selectItems value="#{manager.checkcat()}" />
+                </h:selectManyCheckbox>
+                
+                
+                        <h:commandButton value="Process" action="results" ></h:commandButton>
+                   
+                </h:form>
+                    
+                  
+                
+            </h2>
+            
+            
+            
+        </center>
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,12 @@
+<h:panelGrid columns="2" cellpadding="5" >
+                    <p:outputLabel value="Search" for="searchName"></p:outputLabel>
+                   
+                    <p:autoComplete id="searchName" value="#{searchController.searchName}" completeMethod="#{searchController.completeText}" forceSelection="true"
+                                    onkeypress="if (event.keyCode === 13)">
+                    </p:autoComplete>
+                    </h:panelGrid>
+                
+                
+                        <h:selectManyCheckbox value="#{tgbean.cat}"  layout="pageDirection">
+                    <f:selectItems value="#{manager.checkcat()}" />
+                </h:selectManyCheckbox> 

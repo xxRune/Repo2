@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewUsrTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewUsrLabel_id}"/>
+                    <h:outputText value="#{usrController.selected.id}" title="#{bundle.ViewUsrTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewUsrLabel_username}"/>
+                    <h:outputText value="#{usrController.selected.username}" title="#{bundle.ViewUsrTitle_username}"/>
+                    <h:outputText value="#{bundle.ViewUsrLabel_password}"/>
+                    <h:outputText value="#{usrController.selected.password}" title="#{bundle.ViewUsrTitle_password}"/>
+                    <h:outputText value="#{bundle.ViewUsrLabel_role}"/>
+                    <h:outputText value="#{usrController.selected.role}" title="#{bundle.ViewUsrTitle_role}"/>
+                    <h:outputText value="#{bundle.ViewUsrLabel_name}"/>
+                    <h:outputText value="#{usrController.selected.name}" title="#{bundle.ViewUsrTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewUsrLabel_surname}"/>
+                    <h:outputText value="#{usrController.selected.surname}" title="#{bundle.ViewUsrTitle_surname}"/>
+                    <h:outputText value="#{bundle.ViewUsrLabel_up}"/>
+                    <h:outputText value="#{usrController.selected.up}" title="#{bundle.ViewUsrTitle_up}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{usrController.destroyAndView}" value="#{bundle.ViewUsrDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewUsrEditLink}"/>
+                <br />
+                <h:commandLink action="#{usrController.prepareCreate}" value="#{bundle.ViewUsrCreateLink}" />
+                <br />
+                <h:commandLink action="#{usrController.prepareList}" value="#{bundle.ViewUsrShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewUsrIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
