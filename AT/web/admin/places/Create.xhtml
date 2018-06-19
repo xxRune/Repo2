@@ -21,6 +21,10 @@
                     <h:inputText id="category" value="#{placesController.selected.category}" title="#{bundle.CreatePlacesTitle_category}" required="true" requiredMessage="#{bundle.CreatePlacesRequiredMessage_category}"/>
                     <h:outputLabel value="#{bundle.CreatePlacesLabel_name}" for="name" />
                     <h:inputText id="name" value="#{placesController.selected.name}" title="#{bundle.CreatePlacesTitle_name}" required="true" requiredMessage="#{bundle.CreatePlacesRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.CreatePlacesLabel_posURL}" for="posURL" />
+                    <h:inputText id="posURL" value="#{placesController.selected.posURL}" title="#{bundle.CreatePlacesTitle_posURL}" required="true" requiredMessage="#{bundle.CreatePlacesRequiredMessage_posURL}"/>
+                    <h:outputLabel value="#{bundle.CreatePlacesLabel_plcFk}" for="plcFk" />
+                    <h:inputText id="plcFk" value="#{placesController.selected.plcFk}" title="#{bundle.CreatePlacesTitle_plcFk}" required="true" requiredMessage="#{bundle.CreatePlacesRequiredMessage_plcFk}"/>
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{placesController.create}" value="#{bundle.CreatePlacesSaveLink}" />
@@ -29,7 +33,7 @@
                 <h:commandLink action="#{placesController.prepareList}" value="#{bundle.CreatePlacesShowAllLink}" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreatePlacesIndexLink}"/>
+                <h:link outcome="/admin/admin" value="#{bundle.CreatePlacesIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

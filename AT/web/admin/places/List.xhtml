@@ -40,6 +40,18 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlacesTitle_posURL}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.posURL}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPlacesTitle_plcFk}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.plcFk}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
                             <h:commandLink action="#{placesController.prepareView}" value="#{bundle.ListPlacesViewLink}"/>
@@ -54,7 +66,7 @@
                 <h:commandLink action="#{placesController.prepareCreate}" value="#{bundle.ListPlacesCreateLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListPlacesIndexLink}"/>
+                <h:link outcome="/admin/admin" value="#{bundle.ListPlacesIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

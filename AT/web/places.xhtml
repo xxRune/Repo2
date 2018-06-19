@@ -10,41 +10,48 @@
         
         <style>
             .bckg{
-                background-image: url("resources/beach-scenery-albania.jpg"); 
+                background-image: url("resources/download.jpg"); 
+                background-attachment: fixed;
+                  background-size: 100%;
+               
             }
         </style>
     </h:head>
-   <h:body styleClass="bckg">
+   <h:body styleClass="bckg" style="background-size: auto">
         
         <center>
             <h1 > Albania Travel </h1>
-            
-            <h1 > Cities </h1>
-            <h1> Villages </h1>
-            <h1> Touristic Points </h1>
-            
-            <h2>
+           
+           
                 <h:form>
                      <h:commandButton value="Home" action="index" />
                       <h:commandButton value="Tags" action="tags" />
                        <h:commandButton value="Places" action="places" />
                         <h:commandButton value="About" action="about" />
-                     
-                        <h:selectOneMenu >
+                        <br></br><br></br>
+                        
+                        <div class="places-category">
+                        Cities
+                        <h:selectOneMenu style="opacity: 1" >
                             <f:selectItems value="#{manager.city()}" var="manager" itemValue="#{manager.plc}" itemLabel="#{manager.plc}"/>
                         </h:selectOneMenu>
+                        <br></br><br></br>
                         
+                        Villages
                         <h:selectOneMenu >
                             <f:selectItems value="#{manager.village()}" var="manager" itemValue="#{manager.plc}" itemLabel="#{manager.plc}"/>
                         </h:selectOneMenu>
+                        <br></br><br></br>
                         
+                        Touristic Points
                          <h:selectOneMenu >
                              <f:selectItems value="#{manager.touristicpoint()}" var="manager" itemValue="#{manager.plc}" itemLabel="#{manager.plc}"/>
                         </h:selectOneMenu>
                         
+                        </div>
                 </h:form>
   
-            </h2>
+           
             
             
             

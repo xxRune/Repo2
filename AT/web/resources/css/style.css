@@ -1594,6 +1594,7 @@
 		font-size: 13pt;
 		font-weight: 300;
 		line-height: 1.65;
+                margin: 30px;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -2288,7 +2289,7 @@
 		display: block;
 		float: left;
 		margin-right: -2em;
-		opacity: 0;
+		opacity: 0.6;
 		width: 1em;
 		z-index: -1;
 	}
@@ -3916,3 +3917,21 @@
 			}
 
 		}
+                
+                .about-text-wrap{
+                    max-width: 600px;
+                }
+                .about-text{
+                    color: black;
+                    font-weight: 800;
+                    font-size: 22px;
+                }
+                
+                .places-category{
+                    opacity: 1;
+                    visibility: visible;
+                    color: black;
+                   border-color: blue;
+                   border-width: 10px;
+                   font-size: 16px;
+                }

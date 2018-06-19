@@ -4,24 +4,29 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         <title>Admin Page</title>
+        <h:outputStylesheet library="css" name="style.css"  />
+        
     </h:head>
     <h:body>
+        
+        <center>
         Welcome <h:outputText value="#{control.username}"></h:outputText>
         
         <br></br>        
         <br />
          <h:link outcome="/admin/places/List" value="Show All Places Items"/>
-      
+         <br></br>
          <br></br>
         <h:link outcome="/admin/tgs/List" value="Show All Tgs Items"/>
         <br />
         
         <br />
-        <h:link outcome="/descri/List" value="Show All Descri Items"/>
+        <h:link outcome="/admin/descri/List" value="Show All Descri Items"/>
         
        <br />
+       <br></br>
                 <h:link outcome="/index" value="Logout"/>
-                
+                </center>
     </h:body>
 </html>
 

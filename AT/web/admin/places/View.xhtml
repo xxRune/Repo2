@@ -21,6 +21,10 @@
                     <h:outputText value="#{placesController.selected.category}" title="#{bundle.ViewPlacesTitle_category}"/>
                     <h:outputText value="#{bundle.ViewPlacesLabel_name}"/>
                     <h:outputText value="#{placesController.selected.name}" title="#{bundle.ViewPlacesTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewPlacesLabel_posURL}"/>
+                    <h:outputText value="#{placesController.selected.posURL}" title="#{bundle.ViewPlacesTitle_posURL}"/>
+                    <h:outputText value="#{bundle.ViewPlacesLabel_plcFk}"/>
+                    <h:outputText value="#{placesController.selected.plcFk}" title="#{bundle.ViewPlacesTitle_plcFk}"/>
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{placesController.destroyAndView}" value="#{bundle.ViewPlacesDestroyLink}"/>
@@ -33,7 +37,7 @@
                 <h:commandLink action="#{placesController.prepareList}" value="#{bundle.ViewPlacesShowAllLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewPlacesIndexLink}"/>
+                <h:link outcome="/admin/admin" value="#{bundle.ViewPlacesIndexLink}"/>
 
             </h:form>
         </ui:define>
