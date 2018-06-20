@@ -10,30 +10,39 @@
         
         <style>
             .bckg{
-                background-image: url("resources/beach-scenery-albania.jpg"); 
+                background-image: url("resources/dandellion.jpg"); 
+                  background-size: 100%;
+                background-attachment: fixed;
             }
         </style>
+        
     </h:head>
     <h:body styleClass="bckg" >
         
         <center>
             <h1> Albania Travel </h1>
+            <br></br><br></br>
             
-            <h2>
+            
                 <h:form>
                     
-                    <h:commandButton value="Login" action="login"></h:commandButton>
-                    
+                    <h2>
                      <h:commandButton value="Home" action="index" />
                       <h:commandButton value="Tags" action="tags" />
                        <h:commandButton value="Places" action="places" />
                         <h:commandButton value="About" action="about" />
+                        </h2>
+                        <br></br><br></br>
                         
-                        <h:outputText value="#{manager.desc()}"/>
+                        
+                        <div class="about-text-wrap ">
+                            
+                        <h:outputText value="#{manager.desc()}" class="about-text"/>
+                        </div>
                         
                 </h:form>
   
-            </h2>
+            
             
             
         </center>

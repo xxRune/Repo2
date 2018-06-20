@@ -34,6 +34,12 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTgsTitle_idFk}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idFk}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
                             <h:commandLink action="#{tgsController.prepareView}" value="#{bundle.ListTgsViewLink}"/>
@@ -48,7 +54,7 @@
                 <h:commandLink action="#{tgsController.prepareCreate}" value="#{bundle.ListTgsCreateLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListTgsIndexLink}"/>
+                <h:link outcome="/admin/admin" value="#{bundle.ListTgsIndexLink}"/>
             </h:form>
         </ui:define>
     </ui:composition>

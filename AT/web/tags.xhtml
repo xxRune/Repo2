@@ -13,7 +13,11 @@
       
         <style>
             .bckg{
-                background-image: url("resources/beach-scenery-albania.jpg");
+                background-image: url("resources/download.jpg");
+                background-attachment: fixed;
+                  background-size: 100%;
+                
+                
             }
         </style>
         
@@ -24,55 +28,44 @@
         <center>
             <h1 > Albania Travel </h1>
             
-            <h1 > List of Tags  </h1>
-            <h1 > Selected Tags</h1>
-            <h1 > Choose Category</h1>
-            
-            <h2>
-               
-                    
+           
                 <h:form>
-                    
-                    
+
                      <h:commandButton value="Home" action="index"  />
                       <h:commandButton value="Tags" action="tags"  />
                        <h:commandButton value="Places" action="places"  />
                         <h:commandButton value="About" action="about"  />
                         
-                        <h:selectOneMenu  value="#{tgbean.currentselected}" >
+                        <br></br><br></br>
+                        <div class="places-category">
+                         List of Tags  
+                         <h:selectOneMenu  value="#{tgbean.currentselected}" style="" >
                             <f:selectItems value="#{manager.tags()}" var="manager" itemValue="#{manager.tg}" itemLabel="#{manager.tg}"/>
                             </h:selectOneMenu>
                         
-                        <h:commandButton value="Add" action="#{tgbean.addtoList()}" >
-                           
-                        </h:commandButton>
+                         <h:commandButton value="Add" action="#{tgbean.addtoList()}" ></h:commandButton>
+                         
+                      
+                        <h:commandButton value="Delete All" action="#{tgbean.delAll()}" ></h:commandButton>
                         
-                        <h:commandButton value="Delete All" action="#{tgbean.delAll()}" >
-                            </h:commandButton>
-                        
-                    
-                            
-                        <ui:repeat var="currentselected" value="#{tgbean.stg}">
+                      <ui:repeat var="currentselected" value="#{tgbean.stg}">
                                 <li>#{currentselected}</li>
                             </ui:repeat>
+                      
+                      <br></br><br></br>
 
                 
-                
+                Choose Category
                         <h:selectManyCheckbox value="#{tgbean.cat}"  layout="pageDirection">
                     <f:selectItems value="#{manager.checkcat()}" />
                 </h:selectManyCheckbox>
-                
+                <br></br><br></br>
                 
                         <h:commandButton value="Process" action="results" ></h:commandButton>
                    
+                        </div>
                 </h:form>
                     
-                  
-                
-            </h2>
-            
-            
-            
         </center>
         
     </h:body>

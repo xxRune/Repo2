@@ -21,6 +21,10 @@
                     <h:inputText id="category" value="#{placesController.selected.category}" title="#{bundle.EditPlacesTitle_category}" required="true" requiredMessage="#{bundle.EditPlacesRequiredMessage_category}"/>
                     <h:outputLabel value="#{bundle.EditPlacesLabel_name}" for="name" />
                     <h:inputText id="name" value="#{placesController.selected.name}" title="#{bundle.EditPlacesTitle_name}" required="true" requiredMessage="#{bundle.EditPlacesRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditPlacesLabel_posURL}" for="posURL" />
+                    <h:inputText id="posURL" value="#{placesController.selected.posURL}" title="#{bundle.EditPlacesTitle_posURL}" required="true" requiredMessage="#{bundle.EditPlacesRequiredMessage_posURL}"/>
+                    <h:outputLabel value="#{bundle.EditPlacesLabel_plcFk}" for="plcFk" />
+                    <h:inputText id="plcFk" value="#{placesController.selected.plcFk}" title="#{bundle.EditPlacesTitle_plcFk}" required="true" requiredMessage="#{bundle.EditPlacesRequiredMessage_plcFk}"/>
                 </h:panelGrid>
                 <h:commandLink action="#{placesController.update}" value="#{bundle.EditPlacesSaveLink}"/>
                 <br />
@@ -30,7 +34,7 @@
                 <h:commandLink action="#{placesController.prepareList}" value="#{bundle.EditPlacesShowAllLink}" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditPlacesIndexLink}" />
+                <h:link outcome="/admin/admin" value="#{bundle.EditPlacesIndexLink}" />
             </h:form>
         </ui:define>
     </ui:composition>

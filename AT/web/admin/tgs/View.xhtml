@@ -19,6 +19,8 @@
                     <h:outputText value="#{tgsController.selected.id}" title="#{bundle.ViewTgsTitle_id}"/>
                     <h:outputText value="#{bundle.ViewTgsLabel_name}"/>
                     <h:outputText value="#{tgsController.selected.name}" title="#{bundle.ViewTgsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewTgsLabel_idFk}"/>
+                    <h:outputText value="#{tgsController.selected.idFk}" title="#{bundle.ViewTgsTitle_idFk}"/>
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{tgsController.destroyAndView}" value="#{bundle.ViewTgsDestroyLink}"/>
@@ -31,7 +33,7 @@
                 <h:commandLink action="#{tgsController.prepareList}" value="#{bundle.ViewTgsShowAllLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewTgsIndexLink}"/>
+                <h:link outcome="/admin/admin" value="#{bundle.ViewTgsIndexLink}"/>
 
             </h:form>
         </ui:define>

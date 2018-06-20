@@ -19,6 +19,10 @@
                     <h:inputText id="id" value="#{tgsController.selected.id}" title="#{bundle.EditTgsTitle_id}" required="true" requiredMessage="#{bundle.EditTgsRequiredMessage_id}"/>
                     <h:outputLabel value="#{bundle.EditTgsLabel_name}" for="name" />
                     <h:inputText id="name" value="#{tgsController.selected.name}" title="#{bundle.EditTgsTitle_name}" required="true" requiredMessage="#{bundle.EditTgsRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditTgsLabel_idFk}" for="idFk" />
+                    <h:selectOneMenu id="idFk" value="#{tgsController.selected.idFk}" title="#{bundle.EditTgsTitle_idFk}" required="true" requiredMessage="#{bundle.EditTgsRequiredMessage_idFk}">
+                        <f:selectItems value="#{placesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
                 </h:panelGrid>
                 <h:commandLink action="#{tgsController.update}" value="#{bundle.EditTgsSaveLink}"/>
                 <br />
@@ -28,7 +32,7 @@
                 <h:commandLink action="#{tgsController.prepareList}" value="#{bundle.EditTgsShowAllLink}" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditTgsIndexLink}" />
+                <h:link outcome="/admin/admin" value="#{bundle.EditTgsIndexLink}" />
             </h:form>
         </ui:define>
     </ui:composition>
