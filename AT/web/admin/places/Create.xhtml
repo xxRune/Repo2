@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreatePlacesLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{placesController.selected.id}" title="#{bundle.CreatePlacesTitle_id}" required="true" requiredMessage="#{bundle.CreatePlacesRequiredMessage_id}"/>
+                    <h:inputText readonly="true" id="id" value="#{placesController.selected.id}" title="#{bundle.CreatePlacesTitle_id}" required="true" requiredMessage="#{bundle.CreatePlacesRequiredMessage_id}"/>
                     <h:outputLabel value="#{bundle.CreatePlacesLabel_category}" for="category" />
                     <h:inputText id="category" value="#{placesController.selected.category}" title="#{bundle.CreatePlacesTitle_category}" required="true" requiredMessage="#{bundle.CreatePlacesRequiredMessage_category}"/>
                     <h:outputLabel value="#{bundle.CreatePlacesLabel_name}" for="name" />

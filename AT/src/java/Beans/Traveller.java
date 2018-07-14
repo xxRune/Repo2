@@ -87,8 +87,6 @@ public class Traveller {
         
                for(String element: t){
                    
-               
-                
                  str="SELECT p.name, p.posURL FROM places as p \n" +
 "LEFT JOIN categ as c on p.name = c.name\n" +
 "LEFT JOIN tgs as t on p.id = t.id_fk\n" +
