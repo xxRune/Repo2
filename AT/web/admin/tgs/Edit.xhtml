@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditTgsLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{tgsController.selected.id}" title="#{bundle.EditTgsTitle_id}" required="true" requiredMessage="#{bundle.EditTgsRequiredMessage_id}"/>
+                    <h:inputText readonly="true" id="id" value="#{tgsController.selected.id}" title="#{bundle.EditTgsTitle_id}" required="true" requiredMessage="#{bundle.EditTgsRequiredMessage_id}"/>
                     <h:outputLabel value="#{bundle.EditTgsLabel_name}" for="name" />
                     <h:inputText id="name" value="#{tgsController.selected.name}" title="#{bundle.EditTgsTitle_name}" required="true" requiredMessage="#{bundle.EditTgsRequiredMessage_name}"/>
                     <h:outputLabel value="#{bundle.EditTgsLabel_idFk}" for="idFk" />

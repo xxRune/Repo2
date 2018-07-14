@@ -16,7 +16,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateDescriLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{descriController.selected.id}" title="#{bundle.CreateDescriTitle_id}" required="true" requiredMessage="#{bundle.CreateDescriRequiredMessage_id}"/>
+                    <h:inputText readonly="true" id="id" value="#{descriController.selected.id}" title="#{bundle.CreateDescriTitle_id}" required="true" requiredMessage="#{bundle.CreateDescriRequiredMessage_id}"/>
                     <h:outputLabel value="#{bundle.CreateDescriLabel_de}" for="de" />
                     <h:inputText id="de" value="#{descriController.selected.de}" title="#{bundle.CreateDescriTitle_de}" required="true" requiredMessage="#{bundle.CreateDescriRequiredMessage_de}"/>
                 </h:panelGrid>
